@@ -1,0 +1,12 @@
+source;ros_domain_id.txt
+source;share/serial_com_py/hook/pythonpath.ps1
+source;share/serial_com_py/hook/pythonpath.dsv
+source;share/serial_com_py/hook/pythonpath.sh
+source;ros_domain_id.txt
+source;share/serial_com_py/hook/ament_prefix_path.ps1
+source;share/serial_com_py/hook/ament_prefix_path.dsv
+source;share/serial_com_py/hook/ament_prefix_path.sh
+source;ros_domain_id.txt
+source;../../build/serial_com_py/share/serial_com_py/hook/pythonpath_develop.ps1
+source;../../build/serial_com_py/share/serial_com_py/hook/pythonpath_develop.dsv
+source;../../build/serial_com_py/share/serial_com_py/hook/pythonpath_develop.sh

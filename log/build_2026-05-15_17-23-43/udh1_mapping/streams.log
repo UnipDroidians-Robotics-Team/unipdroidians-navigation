@@ -1,0 +1,20 @@
+[1.015s] Invoking command in '/home/joao/Navigation/src/udh1_mapping': PYTHONPATH=/home/joao/Navigation/build/udh1_mapping/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/joao/Navigation/install/udh1_mapping/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/udh1_mapping build --build-base /home/joao/Navigation/build/udh1_mapping/build install --record /home/joao/Navigation/build/udh1_mapping/install.log --single-version-externally-managed install_data
+[1.459s] running egg_info
+[1.460s] writing ../../build/udh1_mapping/udh1_mapping.egg-info/PKG-INFO
+[1.462s] writing dependency_links to ../../build/udh1_mapping/udh1_mapping.egg-info/dependency_links.txt
+[1.462s] writing entry points to ../../build/udh1_mapping/udh1_mapping.egg-info/entry_points.txt
+[1.462s] writing requirements to ../../build/udh1_mapping/udh1_mapping.egg-info/requires.txt
+[1.462s] writing top-level names to ../../build/udh1_mapping/udh1_mapping.egg-info/top_level.txt
+[1.466s] reading manifest file '../../build/udh1_mapping/udh1_mapping.egg-info/SOURCES.txt'
+[1.470s] writing manifest file '../../build/udh1_mapping/udh1_mapping.egg-info/SOURCES.txt'
+[1.471s] running build
+[1.472s] running build_py
+[1.472s] running install
+[1.472s] running install_lib
+[1.472s] running install_data
+[1.472s] running install_egg_info
+[1.477s] removing '/home/joao/Navigation/install/udh1_mapping/lib/python3.10/site-packages/udh1_mapping-0.0.0-py3.10.egg-info' (and everything under it)
+[1.477s] Copying ../../build/udh1_mapping/udh1_mapping.egg-info to /home/joao/Navigation/install/udh1_mapping/lib/python3.10/site-packages/udh1_mapping-0.0.0-py3.10.egg-info
+[1.477s] running install_scripts
+[1.520s] writing list of installed files to '/home/joao/Navigation/build/udh1_mapping/install.log'
+[1.613s] Invoked command in '/home/joao/Navigation/src/udh1_mapping' returned '0': PYTHONPATH=/home/joao/Navigation/build/udh1_mapping/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/joao/Navigation/install/udh1_mapping/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/udh1_mapping build --build-base /home/joao/Navigation/build/udh1_mapping/build install --record /home/joao/Navigation/build/udh1_mapping/install.log --single-version-externally-managed install_data

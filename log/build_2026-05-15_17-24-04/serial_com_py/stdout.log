@@ -1,0 +1,18 @@
+running develop
+running egg_info
+writing serial_com_py.egg-info/PKG-INFO
+writing dependency_links to serial_com_py.egg-info/dependency_links.txt
+writing entry points to serial_com_py.egg-info/entry_points.txt
+writing requirements to serial_com_py.egg-info/requires.txt
+writing top-level names to serial_com_py.egg-info/top_level.txt
+reading manifest file 'serial_com_py.egg-info/SOURCES.txt'
+writing manifest file 'serial_com_py.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/joao/Navigation/install/serial_com_py/lib/python3.10/site-packages/serial-com-py.egg-link (link to .)
+Installing base_driver script to /home/joao/Navigation/install/serial_com_py/lib/serial_com_py
+Installing base_driver_pulse script to /home/joao/Navigation/install/serial_com_py/lib/serial_com_py
+
+Installed /home/joao/Navigation/build/serial_com_py
+running symlink_data
+symbolically linking /home/joao/Navigation/build/serial_com_py/resource/serial_com_py -> /home/joao/Navigation/install/serial_com_py/share/ament_index/resource_index/packages
+symbolically linking /home/joao/Navigation/build/serial_com_py/package.xml -> /home/joao/Navigation/install/serial_com_py/share/serial_com_py

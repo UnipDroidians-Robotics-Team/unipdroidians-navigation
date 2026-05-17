@@ -1,0 +1,4 @@
+distance_watchdog:
+  ros__parameters:
+    fator_desvio: 1.5
+    margem_metros: 0.3

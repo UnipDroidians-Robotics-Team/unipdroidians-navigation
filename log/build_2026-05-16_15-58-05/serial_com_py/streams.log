@@ -1,0 +1,22 @@
+[0.961s] Invoking command in '/home/joao/Navigation/build/serial_com_py': PYTHONPATH=/home/joao/Navigation/build/serial_com_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/joao/Navigation/install/serial_com_py/lib/python3.10/site-packages:${PYTHONPATH} ROS_DOMAIN_ID=87 /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/joao/Navigation/build/serial_com_py/build --no-deps symlink_data --force
+[1.156s] running develop
+[1.281s] running egg_info
+[1.281s] writing serial_com_py.egg-info/PKG-INFO
+[1.281s] writing dependency_links to serial_com_py.egg-info/dependency_links.txt
+[1.281s] writing entry points to serial_com_py.egg-info/entry_points.txt
+[1.282s] writing requirements to serial_com_py.egg-info/requires.txt
+[1.282s] writing top-level names to serial_com_py.egg-info/top_level.txt
+[1.282s] reading manifest file 'serial_com_py.egg-info/SOURCES.txt'
+[1.283s] writing manifest file 'serial_com_py.egg-info/SOURCES.txt'
+[1.284s] running build_ext
+[1.284s] Creating /home/joao/Navigation/install/serial_com_py/lib/python3.10/site-packages/serial-com-py.egg-link (link to .)
+[1.284s] Installing base_driver script to /home/joao/Navigation/install/serial_com_py/lib/serial_com_py
+[1.285s] Installing base_driver_pulse script to /home/joao/Navigation/install/serial_com_py/lib/serial_com_py
+[1.285s] Installing distance_watchdog script to /home/joao/Navigation/install/serial_com_py/lib/serial_com_py
+[1.285s] 
+[1.285s] Installed /home/joao/Navigation/build/serial_com_py
+[1.285s] running symlink_data
+[1.285s] symbolically linking /home/joao/Navigation/build/serial_com_py/resource/serial_com_py -> /home/joao/Navigation/install/serial_com_py/share/ament_index/resource_index/packages
+[1.285s] symbolically linking /home/joao/Navigation/build/serial_com_py/package.xml -> /home/joao/Navigation/install/serial_com_py/share/serial_com_py
+[1.285s] symbolically linking /home/joao/Navigation/build/serial_com_py/config/watchdog_params.yaml -> /home/joao/Navigation/install/serial_com_py/share/serial_com_py/config
+[1.329s] Invoked command in '/home/joao/Navigation/build/serial_com_py' returned '0': PYTHONPATH=/home/joao/Navigation/build/serial_com_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/joao/Navigation/install/serial_com_py/lib/python3.10/site-packages:${PYTHONPATH} ROS_DOMAIN_ID=87 /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/joao/Navigation/build/serial_com_py/build --no-deps symlink_data --force

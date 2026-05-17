@@ -1,0 +1,39 @@
+running egg_info
+creating ../../build/udh1_mapping/udh1_mapping.egg-info
+writing ../../build/udh1_mapping/udh1_mapping.egg-info/PKG-INFO
+writing dependency_links to ../../build/udh1_mapping/udh1_mapping.egg-info/dependency_links.txt
+writing entry points to ../../build/udh1_mapping/udh1_mapping.egg-info/entry_points.txt
+writing requirements to ../../build/udh1_mapping/udh1_mapping.egg-info/requires.txt
+writing top-level names to ../../build/udh1_mapping/udh1_mapping.egg-info/top_level.txt
+writing manifest file '../../build/udh1_mapping/udh1_mapping.egg-info/SOURCES.txt'
+reading manifest file '../../build/udh1_mapping/udh1_mapping.egg-info/SOURCES.txt'
+writing manifest file '../../build/udh1_mapping/udh1_mapping.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/joao/Navigation/build/udh1_mapping/build
+creating /home/joao/Navigation/build/udh1_mapping/build/lib
+creating /home/joao/Navigation/build/udh1_mapping/build/lib/udh1_mapping
+copying udh1_mapping/__init__.py -> /home/joao/Navigation/build/udh1_mapping/build/lib/udh1_mapping
+running install
+running install_lib
+creating /home/joao/Navigation/install/udh1_mapping/lib/python3.10/site-packages/udh1_mapping
+copying /home/joao/Navigation/build/udh1_mapping/build/lib/udh1_mapping/__init__.py -> /home/joao/Navigation/install/udh1_mapping/lib/python3.10/site-packages/udh1_mapping
+byte-compiling /home/joao/Navigation/install/udh1_mapping/lib/python3.10/site-packages/udh1_mapping/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/joao/Navigation/install/udh1_mapping/share/ament_index
+creating /home/joao/Navigation/install/udh1_mapping/share/ament_index/resource_index
+creating /home/joao/Navigation/install/udh1_mapping/share/ament_index/resource_index/packages
+copying resource/udh1_mapping -> /home/joao/Navigation/install/udh1_mapping/share/ament_index/resource_index/packages
+copying package.xml -> /home/joao/Navigation/install/udh1_mapping/share/udh1_mapping
+creating /home/joao/Navigation/install/udh1_mapping/share/udh1_mapping/launch
+copying launch/launch.py -> /home/joao/Navigation/install/udh1_mapping/share/udh1_mapping/launch
+copying launch/filter_launch.py -> /home/joao/Navigation/install/udh1_mapping/share/udh1_mapping/launch
+creating /home/joao/Navigation/install/udh1_mapping/share/udh1_mapping/config
+copying config/laser_filters.yaml -> /home/joao/Navigation/install/udh1_mapping/share/udh1_mapping/config
+copying config/nav2_params_realsense.yaml -> /home/joao/Navigation/install/udh1_mapping/share/udh1_mapping/config
+copying config/mapper_params_online_async.yaml -> /home/joao/Navigation/install/udh1_mapping/share/udh1_mapping/config
+copying config/nav2_params.yaml -> /home/joao/Navigation/install/udh1_mapping/share/udh1_mapping/config
+running install_egg_info
+Copying ../../build/udh1_mapping/udh1_mapping.egg-info to /home/joao/Navigation/install/udh1_mapping/lib/python3.10/site-packages/udh1_mapping-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/joao/Navigation/build/udh1_mapping/install.log'

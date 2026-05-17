@@ -126,6 +126,19 @@ def generate_launch_description():
         arguments=['-d', os.path.join(my_bringup_dir, 'rviz', 'nav2_udh1.rviz')],
         parameters=[{'use_sim_time': False}]
     )
+    
+    watchdog_node = Node(
+        package='serial_com_py',
+        executable='distance_watchdog',
+        name='distance_watchdog',
+        output='screen',
+        parameters=[
+            os.path.join(
+                get_package_share_directory('serial_com_py'),
+                'config', 'watchdog_params.yaml'
+            )
+        ]
+    )
 
     return LaunchDescription([
         map_file_arg,
@@ -139,4 +152,7 @@ def generate_launch_description():
         lifecycle_manager,
         nav2_bringup,
         rviz_node,
+        watchdog_node,
     ])
+    
+    

@@ -10,6 +10,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name + '/config', ['config/watchdog_params.yaml']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -25,7 +26,8 @@ setup(
     entry_points={
         'console_scripts': [
             'base_driver = serial_com_py.base_driver:main',
-            'base_driver_pulse = serial_com_py.base_driver_pulse:main', # <-- Linha adicionada aqui!
+            'base_driver_pulse = serial_com_py.base_driver_pulse:main',
+            'distance_watchdog = serial_com_py.distance_watchdog:main', # <-- Linha adicionada aqui!
         ],
     },
 )

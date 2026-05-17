@@ -1,0 +1,26 @@
+running develop
+running egg_info
+writing my_robot_bringup.egg-info/PKG-INFO
+writing dependency_links to my_robot_bringup.egg-info/dependency_links.txt
+writing entry points to my_robot_bringup.egg-info/entry_points.txt
+writing requirements to my_robot_bringup.egg-info/requires.txt
+writing top-level names to my_robot_bringup.egg-info/top_level.txt
+reading manifest file 'my_robot_bringup.egg-info/SOURCES.txt'
+writing manifest file 'my_robot_bringup.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/joao/Navigation/install/my_robot_bringup/lib/python3.10/site-packages/my-robot-bringup.egg-link (link to .)
+Installing base_driver script to /home/joao/Navigation/install/my_robot_bringup/lib/my_robot_bringup
+Installing base_driver_pulse script to /home/joao/Navigation/install/my_robot_bringup/lib/my_robot_bringup
+
+Installed /home/joao/Navigation/build/my_robot_bringup
+running symlink_data
+symbolically linking /home/joao/Navigation/build/my_robot_bringup/resource/my_robot_bringup -> /home/joao/Navigation/install/my_robot_bringup/share/ament_index/resource_index/packages
+symbolically linking /home/joao/Navigation/build/my_robot_bringup/package.xml -> /home/joao/Navigation/install/my_robot_bringup/share/my_robot_bringup
+symbolically linking /home/joao/Navigation/build/my_robot_bringup/launch/udh1_core.launch.py -> /home/joao/Navigation/install/my_robot_bringup/share/my_robot_bringup/launch
+symbolically linking /home/joao/Navigation/build/my_robot_bringup/launch/navigation.launch.py -> /home/joao/Navigation/install/my_robot_bringup/share/my_robot_bringup/launch
+symbolically linking /home/joao/Navigation/build/my_robot_bringup/launch/navigation_realsense.launch.py -> /home/joao/Navigation/install/my_robot_bringup/share/my_robot_bringup/launch
+symbolically linking /home/joao/Navigation/build/my_robot_bringup/launch/udh1_core_maping_pulse.launch.py -> /home/joao/Navigation/install/my_robot_bringup/share/my_robot_bringup/launch
+symbolically linking /home/joao/Navigation/build/my_robot_bringup/launch/robot.launch.py -> /home/joao/Navigation/install/my_robot_bringup/share/my_robot_bringup/launch
+symbolically linking /home/joao/Navigation/build/my_robot_bringup/launch/visualizar_mapa.launch.py -> /home/joao/Navigation/install/my_robot_bringup/share/my_robot_bringup/launch
+symbolically linking /home/joao/Navigation/build/my_robot_bringup/launch/udh1_core_maping.launch.py -> /home/joao/Navigation/install/my_robot_bringup/share/my_robot_bringup/launch
+symbolically linking /home/joao/Navigation/build/my_robot_bringup/rviz/nav2_udh1.rviz -> /home/joao/Navigation/install/my_robot_bringup/share/my_robot_bringup/rviz

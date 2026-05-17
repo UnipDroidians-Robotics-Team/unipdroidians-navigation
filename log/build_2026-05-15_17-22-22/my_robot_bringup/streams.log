@@ -1,0 +1,44 @@
+[0.936s] Invoking command in '/home/joao/Navigation/src/my_robot_bringup': PYTHONPATH=/home/joao/Navigation/build/my_robot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/joao/Navigation/install/my_robot_bringup/lib/python3.10/site-packages:${PYTHONPATH} ROS_DOMAIN_ID=55 /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_robot_bringup build --build-base /home/joao/Navigation/build/my_robot_bringup/build install --record /home/joao/Navigation/build/my_robot_bringup/install.log --single-version-externally-managed install_data
+[1.123s] running egg_info
+[1.123s] creating ../../build/my_robot_bringup/my_robot_bringup.egg-info
+[1.123s] writing ../../build/my_robot_bringup/my_robot_bringup.egg-info/PKG-INFO
+[1.124s] writing dependency_links to ../../build/my_robot_bringup/my_robot_bringup.egg-info/dependency_links.txt
+[1.124s] writing entry points to ../../build/my_robot_bringup/my_robot_bringup.egg-info/entry_points.txt
+[1.124s] writing requirements to ../../build/my_robot_bringup/my_robot_bringup.egg-info/requires.txt
+[1.124s] writing top-level names to ../../build/my_robot_bringup/my_robot_bringup.egg-info/top_level.txt
+[1.124s] writing manifest file '../../build/my_robot_bringup/my_robot_bringup.egg-info/SOURCES.txt'
+[1.125s] reading manifest file '../../build/my_robot_bringup/my_robot_bringup.egg-info/SOURCES.txt'
+[1.126s] writing manifest file '../../build/my_robot_bringup/my_robot_bringup.egg-info/SOURCES.txt'
+[1.126s] running build
+[1.126s] running build_py
+[1.126s] creating /home/joao/Navigation/build/my_robot_bringup/build
+[1.126s] creating /home/joao/Navigation/build/my_robot_bringup/build/lib
+[1.126s] creating /home/joao/Navigation/build/my_robot_bringup/build/lib/my_robot_bringup
+[1.126s] copying my_robot_bringup/__init__.py -> /home/joao/Navigation/build/my_robot_bringup/build/lib/my_robot_bringup
+[1.126s] running install
+[1.127s] running install_lib
+[1.127s] creating /home/joao/Navigation/install/my_robot_bringup/lib/python3.10/site-packages/my_robot_bringup
+[1.127s] copying /home/joao/Navigation/build/my_robot_bringup/build/lib/my_robot_bringup/__init__.py -> /home/joao/Navigation/install/my_robot_bringup/lib/python3.10/site-packages/my_robot_bringup
+[1.128s] byte-compiling /home/joao/Navigation/install/my_robot_bringup/lib/python3.10/site-packages/my_robot_bringup/__init__.py to __init__.cpython-310.pyc
+[1.128s] running install_data
+[1.128s] creating /home/joao/Navigation/install/my_robot_bringup/share/ament_index
+[1.128s] creating /home/joao/Navigation/install/my_robot_bringup/share/ament_index/resource_index
+[1.128s] creating /home/joao/Navigation/install/my_robot_bringup/share/ament_index/resource_index/packages
+[1.128s] copying resource/my_robot_bringup -> /home/joao/Navigation/install/my_robot_bringup/share/ament_index/resource_index/packages
+[1.128s] copying package.xml -> /home/joao/Navigation/install/my_robot_bringup/share/my_robot_bringup
+[1.128s] creating /home/joao/Navigation/install/my_robot_bringup/share/my_robot_bringup/launch
+[1.128s] copying launch/udh1_core.launch.py -> /home/joao/Navigation/install/my_robot_bringup/share/my_robot_bringup/launch
+[1.128s] copying launch/navigation.launch.py -> /home/joao/Navigation/install/my_robot_bringup/share/my_robot_bringup/launch
+[1.128s] copying launch/navigation_realsense.launch.py -> /home/joao/Navigation/install/my_robot_bringup/share/my_robot_bringup/launch
+[1.129s] copying launch/udh1_core_maping_pulse.launch.py -> /home/joao/Navigation/install/my_robot_bringup/share/my_robot_bringup/launch
+[1.129s] copying launch/robot.launch.py -> /home/joao/Navigation/install/my_robot_bringup/share/my_robot_bringup/launch
+[1.129s] copying launch/visualizar_mapa.launch.py -> /home/joao/Navigation/install/my_robot_bringup/share/my_robot_bringup/launch
+[1.129s] copying launch/udh1_core_maping.launch.py -> /home/joao/Navigation/install/my_robot_bringup/share/my_robot_bringup/launch
+[1.129s] creating /home/joao/Navigation/install/my_robot_bringup/share/my_robot_bringup/rviz
+[1.129s] copying rviz/nav2_udh1.rviz -> /home/joao/Navigation/install/my_robot_bringup/share/my_robot_bringup/rviz
+[1.129s] running install_egg_info
+[1.130s] Copying ../../build/my_robot_bringup/my_robot_bringup.egg-info to /home/joao/Navigation/install/my_robot_bringup/lib/python3.10/site-packages/my_robot_bringup-0.0.0-py3.10.egg-info
+[1.131s] running install_scripts
+[1.148s] Installing base_driver script to /home/joao/Navigation/install/my_robot_bringup/lib/my_robot_bringup
+[1.148s] Installing base_driver_pulse script to /home/joao/Navigation/install/my_robot_bringup/lib/my_robot_bringup
+[1.148s] writing list of installed files to '/home/joao/Navigation/build/my_robot_bringup/install.log'

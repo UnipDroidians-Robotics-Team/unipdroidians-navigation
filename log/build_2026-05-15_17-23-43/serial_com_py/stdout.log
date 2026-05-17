@@ -1,0 +1,20 @@
+running egg_info
+writing ../../build/serial_com_py/serial_com_py.egg-info/PKG-INFO
+writing dependency_links to ../../build/serial_com_py/serial_com_py.egg-info/dependency_links.txt
+writing entry points to ../../build/serial_com_py/serial_com_py.egg-info/entry_points.txt
+writing requirements to ../../build/serial_com_py/serial_com_py.egg-info/requires.txt
+writing top-level names to ../../build/serial_com_py/serial_com_py.egg-info/top_level.txt
+reading manifest file '../../build/serial_com_py/serial_com_py.egg-info/SOURCES.txt'
+writing manifest file '../../build/serial_com_py/serial_com_py.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/joao/Navigation/install/serial_com_py/lib/python3.10/site-packages/serial_com_py-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/serial_com_py/serial_com_py.egg-info to /home/joao/Navigation/install/serial_com_py/lib/python3.10/site-packages/serial_com_py-0.0.0-py3.10.egg-info
+running install_scripts
+Installing base_driver script to /home/joao/Navigation/install/serial_com_py/lib/serial_com_py
+Installing base_driver_pulse script to /home/joao/Navigation/install/serial_com_py/lib/serial_com_py
+writing list of installed files to '/home/joao/Navigation/build/serial_com_py/install.log'
