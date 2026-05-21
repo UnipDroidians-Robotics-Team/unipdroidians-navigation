@@ -1,0 +1,19 @@
+[1.040s] Invoking command in '/home/joao/Navigation/build/serial_com_py': PYTHONPATH=/home/joao/Navigation/build/serial_com_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/joao/Navigation/install/serial_com_py/lib/python3.10/site-packages:${PYTHONPATH} ROS_DOMAIN_ID=46 /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/joao/Navigation/build/serial_com_py/build --no-deps symlink_data
+[1.252s] running develop
+[1.385s] running egg_info
+[1.385s] writing serial_com_py.egg-info/PKG-INFO
+[1.386s] writing dependency_links to serial_com_py.egg-info/dependency_links.txt
+[1.386s] writing entry points to serial_com_py.egg-info/entry_points.txt
+[1.386s] writing requirements to serial_com_py.egg-info/requires.txt
+[1.386s] writing top-level names to serial_com_py.egg-info/top_level.txt
+[1.387s] reading manifest file 'serial_com_py.egg-info/SOURCES.txt'
+[1.388s] writing manifest file 'serial_com_py.egg-info/SOURCES.txt'
+[1.390s] running build_ext
+[1.390s] Creating /home/joao/Navigation/install/serial_com_py/lib/python3.10/site-packages/serial-com-py.egg-link (link to .)
+[1.391s] Installing base_driver script to /home/joao/Navigation/install/serial_com_py/lib/serial_com_py
+[1.391s] Installing base_driver_pulse script to /home/joao/Navigation/install/serial_com_py/lib/serial_com_py
+[1.391s] Installing distance_watchdog script to /home/joao/Navigation/install/serial_com_py/lib/serial_com_py
+[1.391s] 
+[1.391s] Installed /home/joao/Navigation/build/serial_com_py
+[1.391s] running symlink_data
+[1.458s] Invoked command in '/home/joao/Navigation/build/serial_com_py' returned '0': PYTHONPATH=/home/joao/Navigation/build/serial_com_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/joao/Navigation/install/serial_com_py/lib/python3.10/site-packages:${PYTHONPATH} ROS_DOMAIN_ID=46 /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/joao/Navigation/build/serial_com_py/build --no-deps symlink_data

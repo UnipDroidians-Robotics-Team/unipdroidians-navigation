@@ -1,0 +1,4 @@
+source;share/udh1_gazebo/local_setup.bash
+source;share/udh1_gazebo/local_setup.dsv
+source;share/udh1_gazebo/local_setup.sh
+source;share/udh1_gazebo/local_setup.zsh

@@ -1,0 +1,14 @@
+running develop
+running egg_info
+writing udh1_mapping.egg-info/PKG-INFO
+writing dependency_links to udh1_mapping.egg-info/dependency_links.txt
+writing entry points to udh1_mapping.egg-info/entry_points.txt
+writing requirements to udh1_mapping.egg-info/requires.txt
+writing top-level names to udh1_mapping.egg-info/top_level.txt
+reading manifest file 'udh1_mapping.egg-info/SOURCES.txt'
+writing manifest file 'udh1_mapping.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/joao/Navigation/install/udh1_mapping/lib/python3.10/site-packages/udh1-mapping.egg-link (link to .)
+
+Installed /home/joao/Navigation/build/udh1_mapping
+running symlink_data

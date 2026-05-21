@@ -12,6 +12,7 @@ config/laser_filters.yaml
 config/mapper_params_online_async.yaml
 config/nav2_params.yaml
 config/nav2_params_realsense.yaml
+config/nav2_params_sim.yaml
 launch/filter_launch.py
 launch/launch.py
 resource/udh1_mapping

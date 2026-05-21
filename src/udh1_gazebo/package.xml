@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>udh1_gazebo</name>
+  <version>0.1.0</version>
+  <description>Simulação Gazebo do robô UDH1</description>
+
+  <maintainer email="robotica@unip.br">UnipDroidians</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclpy</depend>
+  <depend>gazebo_ros</depend>
+  <depend>gazebo_plugins</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>joint_state_publisher</depend>
+  <depend>udh1_description</depend>
+  <depend>xacro</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

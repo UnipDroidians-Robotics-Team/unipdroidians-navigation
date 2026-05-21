@@ -1,0 +1,24 @@
+[0.023s] Invoking command in '/home/joao/Navigation/build/udh1_gazebo': AMENT_PREFIX_PATH=/home/joao/Navigation/install/udh1_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joao/Navigation/install/udh1_description:/opt/ros/humble /usr/bin/cmake --build /home/joao/Navigation/build/udh1_gazebo -- -j16 -l16
+[0.070s] Invoked command in '/home/joao/Navigation/build/udh1_gazebo' returned '0': AMENT_PREFIX_PATH=/home/joao/Navigation/install/udh1_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joao/Navigation/install/udh1_description:/opt/ros/humble /usr/bin/cmake --build /home/joao/Navigation/build/udh1_gazebo -- -j16 -l16
+[0.072s] Invoking command in '/home/joao/Navigation/build/udh1_gazebo': AMENT_PREFIX_PATH=/home/joao/Navigation/install/udh1_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joao/Navigation/install/udh1_description:/opt/ros/humble /usr/bin/cmake --install /home/joao/Navigation/build/udh1_gazebo
+[0.080s] -- Install configuration: ""
+[0.081s] -- Execute custom install script
+[0.081s] -- Up-to-date symlink: /home/joao/Navigation/install/udh1_gazebo/share/udh1_gazebo/launch/gazebo.launch.py
+[0.081s] -- Up-to-date symlink: /home/joao/Navigation/install/udh1_gazebo/share/udh1_gazebo/launch/gazebo_nav2.launch.py
+[0.081s] -- Up-to-date symlink: /home/joao/Navigation/install/udh1_gazebo/share/udh1_gazebo/worlds/udh1_world.world
+[0.082s] -- Up-to-date symlink: /home/joao/Navigation/install/udh1_gazebo/share/ament_index/resource_index/package_run_dependencies/udh1_gazebo
+[0.082s] -- Up-to-date symlink: /home/joao/Navigation/install/udh1_gazebo/share/ament_index/resource_index/parent_prefix_path/udh1_gazebo
+[0.082s] -- Up-to-date symlink: /home/joao/Navigation/install/udh1_gazebo/share/udh1_gazebo/environment/ament_prefix_path.sh
+[0.082s] -- Up-to-date symlink: /home/joao/Navigation/install/udh1_gazebo/share/udh1_gazebo/environment/ament_prefix_path.dsv
+[0.082s] -- Up-to-date symlink: /home/joao/Navigation/install/udh1_gazebo/share/udh1_gazebo/environment/path.sh
+[0.082s] -- Up-to-date symlink: /home/joao/Navigation/install/udh1_gazebo/share/udh1_gazebo/environment/path.dsv
+[0.082s] -- Up-to-date symlink: /home/joao/Navigation/install/udh1_gazebo/share/udh1_gazebo/local_setup.bash
+[0.082s] -- Up-to-date symlink: /home/joao/Navigation/install/udh1_gazebo/share/udh1_gazebo/local_setup.sh
+[0.083s] -- Up-to-date symlink: /home/joao/Navigation/install/udh1_gazebo/share/udh1_gazebo/local_setup.zsh
+[0.083s] -- Up-to-date symlink: /home/joao/Navigation/install/udh1_gazebo/share/udh1_gazebo/local_setup.dsv
+[0.083s] -- Symlinking: /home/joao/Navigation/install/udh1_gazebo/share/udh1_gazebo/package.dsv
+[0.094s] -- Up-to-date symlink: /home/joao/Navigation/install/udh1_gazebo/share/ament_index/resource_index/packages/udh1_gazebo
+[0.094s] -- Up-to-date symlink: /home/joao/Navigation/install/udh1_gazebo/share/udh1_gazebo/cmake/udh1_gazeboConfig.cmake
+[0.094s] -- Up-to-date symlink: /home/joao/Navigation/install/udh1_gazebo/share/udh1_gazebo/cmake/udh1_gazeboConfig-version.cmake
+[0.094s] -- Up-to-date symlink: /home/joao/Navigation/install/udh1_gazebo/share/udh1_gazebo/package.xml
+[0.097s] Invoked command in '/home/joao/Navigation/build/udh1_gazebo' returned '0': AMENT_PREFIX_PATH=/home/joao/Navigation/install/udh1_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/joao/Navigation/install/udh1_description:/opt/ros/humble /usr/bin/cmake --install /home/joao/Navigation/build/udh1_gazebo

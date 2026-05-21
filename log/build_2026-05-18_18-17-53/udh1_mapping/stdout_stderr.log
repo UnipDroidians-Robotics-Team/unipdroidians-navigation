@@ -1,0 +1,23 @@
+running develop
+running egg_info
+writing udh1_mapping.egg-info/PKG-INFO
+writing dependency_links to udh1_mapping.egg-info/dependency_links.txt
+writing entry points to udh1_mapping.egg-info/entry_points.txt
+writing requirements to udh1_mapping.egg-info/requires.txt
+writing top-level names to udh1_mapping.egg-info/top_level.txt
+reading manifest file 'udh1_mapping.egg-info/SOURCES.txt'
+writing manifest file 'udh1_mapping.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/joao/Navigation/install/udh1_mapping/lib/python3.10/site-packages/udh1-mapping.egg-link (link to .)
+
+Installed /home/joao/Navigation/build/udh1_mapping
+running symlink_data
+symbolically linking /home/joao/Navigation/build/udh1_mapping/resource/udh1_mapping -> /home/joao/Navigation/install/udh1_mapping/share/ament_index/resource_index/packages
+symbolically linking /home/joao/Navigation/build/udh1_mapping/package.xml -> /home/joao/Navigation/install/udh1_mapping/share/udh1_mapping
+symbolically linking /home/joao/Navigation/build/udh1_mapping/launch/launch.py -> /home/joao/Navigation/install/udh1_mapping/share/udh1_mapping/launch
+symbolically linking /home/joao/Navigation/build/udh1_mapping/launch/filter_launch.py -> /home/joao/Navigation/install/udh1_mapping/share/udh1_mapping/launch
+symbolically linking /home/joao/Navigation/build/udh1_mapping/config/laser_filters.yaml -> /home/joao/Navigation/install/udh1_mapping/share/udh1_mapping/config
+symbolically linking /home/joao/Navigation/build/udh1_mapping/config/nav2_params_sim.yaml -> /home/joao/Navigation/install/udh1_mapping/share/udh1_mapping/config
+symbolically linking /home/joao/Navigation/build/udh1_mapping/config/nav2_params_realsense.yaml -> /home/joao/Navigation/install/udh1_mapping/share/udh1_mapping/config
+symbolically linking /home/joao/Navigation/build/udh1_mapping/config/mapper_params_online_async.yaml -> /home/joao/Navigation/install/udh1_mapping/share/udh1_mapping/config
+symbolically linking /home/joao/Navigation/build/udh1_mapping/config/nav2_params.yaml -> /home/joao/Navigation/install/udh1_mapping/share/udh1_mapping/config

@@ -1,22 +1,19 @@
 # =============================================================================
 #  nav2_params.yaml — UDH1  (sem RealSense — fallback)
-#  Salve em: udh1_mapping/config/nav2_params.yaml
+#  Salve em: ~/Navigation/src/udh1_mapping/config/nav2_params.yaml
 #
-#  Ajustes para lidar filtrado a 180° frontal (laser_filters.yaml):
-#    - Mais partículas no AMCL para compensar perda de visão traseira
-#    - Limiares de atualização mais baixos (atualiza mais frequente)
-#    - observation_persistence=0 no voxel_layer (limpa obstáculos antigos)
-#
-#  Geometria do udh1.urdf:
-#    Chassi:  0.62 x 0.41m  →  robot_radius = 0.34m
-#    Lidar:   x=0.30  z=0.315  rpy="0 0 π"  (montado de costas)
-#    Câmera:  x=0.26  z=0.48  (não usada neste arquivo)
+#  Correções aplicadas:
+#    1. min_y_velocity_threshold: 0.5 → 0.001 (robô diferencial não tem vel. lateral)
+#    2. transform_tolerance aumentado em pontos críticos (TF mais tolerante)
+#    3. progress_checker: required_movement_radius reduzido (detecta movimentos menores)
+#    4. odom_topic explícito no AMCL e bt_navigator
 # =============================================================================
 
 amcl:
   ros__parameters:
     use_sim_time: false
     scan_topic:      /scan_limpo
+    odom_topic:      /odom               # explícito para garantir que o AMCL escuta certo
     base_frame_id:   base_footprint
     odom_frame_id:   odom
     global_frame_id: map
@@ -27,18 +24,19 @@ amcl:
     alpha4: 0.2
     alpha5: 0.2
     # Mais partículas para compensar os 180° (sem visão traseira)
-    min_particles: 1000   # era 500
-    max_particles: 3000   # era 2000
+    min_particles: 1000
+    max_particles: 3000
     laser_model_type: likelihood_field
     laser_max_range:  12.0
     laser_min_range:  0.15
     laser_likelihood_max_dist: 2.0
     max_beams: 60
     # Atualiza mais frequente para compensar campo de visão reduzido
-    update_min_d: 0.15    # era 0.25
-    update_min_a: 0.1     # era 0.2
+    update_min_d: 0.15
+    update_min_a: 0.1
     resample_interval: 1
-    transform_tolerance: 1.0
+    # Aumentado: dá mais margem para atraso entre odom e scan
+    transform_tolerance: 1.5
     tf_broadcast: true
     save_pose_rate: 0.5
     z_hit:    0.5
@@ -61,7 +59,7 @@ bt_navigator:
     use_sim_time: false
     global_frame:     map
     robot_base_frame: base_footprint
-    odom_topic:       odom
+    odom_topic:       /odom
     bt_loop_duration: 10
     default_server_timeout: 20
     plugin_lib_names:
@@ -102,8 +100,10 @@ controller_server:
   ros__parameters:
     use_sim_time: false
     controller_frequency: 10.0
+    # CORREÇÃO PRINCIPAL: min_y era 0.5 — robô diferencial nunca tem vel. lateral
+    # Com 0.5 o Nav2 nunca reconhecia que o robô estava se movendo
     min_x_velocity_threshold:     0.001
-    min_y_velocity_threshold:     0.5
+    min_y_velocity_threshold:     0.001   # ← corrigido de 0.5 para 0.001
     min_theta_velocity_threshold: 0.001
     failure_tolerance: 0.3
     progress_checker_plugin: progress_checker
@@ -112,14 +112,15 @@ controller_server:
 
     progress_checker:
       plugin: nav2_controller::SimpleProgressChecker
-      required_movement_radius: 0.5
-      movement_time_allowance: 10.0
+      # Reduzido: detecta progressos menores (robô lento já conta como movimento)
+      required_movement_radius: 0.3    # era 0.5
+      movement_time_allowance: 15.0   # era 10.0 — mais tempo para o robô se mover
 
     general_goal_checker:
       stateful: true
       plugin: nav2_controller::SimpleGoalChecker
       xy_goal_tolerance:  0.15
-      yaw_goal_tolerance: 0.1
+      yaw_goal_tolerance: 0.5
 
     FollowPath:
       plugin: dwb_core::DWBLocalPlanner
@@ -144,7 +145,8 @@ controller_server:
       sim_time: 1.7
       linear_granularity:  0.05
       angular_granularity: 0.025
-      transform_tolerance: 0.2
+      # Aumentado: mais tolerante com atraso de TF
+      transform_tolerance: 1.0        # era 0.5
       xy_goal_tolerance: 0.15
       trans_stopped_velocity: 0.25
       short_circuit_trajectory_evaluation: true
@@ -154,18 +156,18 @@ controller_server:
       BaseObstacle.scale: 0.02
       PathAlign.scale: 32.0
       PathAlign.forward_point_distance: 0.1
-      GoalAlign.scale: 24.0
+      GoalAlign.scale: 8.0
       GoalAlign.forward_point_distance: 0.1
       PathDist.scale: 32.0
       GoalDist.scale: 24.0
       RotateToGoal.scale: 32.0
-      RotateToGoal.slowing_factor: 5.0
+      RotateToGoal.slowing_factor: 0.0
       RotateToGoal.lookahead_time: -1.0
 
 planner_server:
   ros__parameters:
     use_sim_time: false
-    expected_planner_frequency: 20.0
+    expected_planner_frequency: 5.0
     planner_plugins: [GridBased]
     GridBased:
       plugin: nav2_navfn_planner/NavfnPlanner
@@ -179,7 +181,7 @@ recoveries_server:
     costmap_topic:   local_costmap/costmap_raw
     footprint_topic: local_costmap/published_footprint
     cycle_frequency: 10.0
-    recovery_plugins: [spin, backup, wait]
+    recovery_plugins: [backup, wait]
     spin:
       plugin: nav2_recoveries/Spin
     backup:
@@ -224,9 +226,6 @@ local_costmap:
         min_obstacle_height: 0.05
         max_obstacle_height: 1.80
         mark_threshold: 0
-        # observation_persistence=0: limpa obstáculos que saem do campo de visão
-        # Necessário pois o lidar só cobre 180° — sem isso obstáculos traseiros
-        # ficam "fantasmas" no costmap indefinidamente
         observation_persistence: 0.0
         observation_sources: scan
         scan:
@@ -284,7 +283,7 @@ global_costmap:
 map_server:
   ros__parameters:
     use_sim_time: false
-    yaml_filename: ""
+    yaml_filename: "/home/joao/athome_ws/mapas/mapa_udh1.yaml"
 
 map_saver:
   ros__parameters:

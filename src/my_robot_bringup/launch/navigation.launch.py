@@ -29,9 +29,9 @@ def generate_launch_description():
     map_file    = LaunchConfiguration('map')
     params_file = LaunchConfiguration('params_file')
 
-    urdf_file = os.path.join(udh1_description_dir, 'urdf', 'udh1.urdf')
-    with open(urdf_file, 'r') as f:
-        robot_description = f.read()
+    import xacro
+    urdf_file = os.path.join(udh1_description_dir, 'urdf', 'udh1.urdf.xacro')
+    robot_description = xacro.process_file(urdf_file).toxml()
 
     robot_state_publisher = Node(
         package='robot_state_publisher',
@@ -127,18 +127,18 @@ def generate_launch_description():
         parameters=[{'use_sim_time': False}]
     )
     
-    watchdog_node = Node(
-        package='serial_com_py',
-        executable='distance_watchdog',
-        name='distance_watchdog',
-        output='screen',
-        parameters=[
-            os.path.join(
-                get_package_share_directory('serial_com_py'),
-                'config', 'watchdog_params.yaml'
-            )
-        ]
-    )
+    #watchdog_node = Node(
+     #   package='serial_com_py',
+     #   executable='distance_watchdog',
+     #   name='distance_watchdog',
+      #  output='screen',
+       # parameters=[
+        #    os.path.join(
+         #       get_package_share_directory('serial_com_py'),
+          #      'config', 'watchdog_params.yaml'
+           # )
+        #]
+    #)
 
     return LaunchDescription([
         map_file_arg,
@@ -152,7 +152,7 @@ def generate_launch_description():
         lifecycle_manager,
         nav2_bringup,
         rviz_node,
-        watchdog_node,
+        #watchdog_node,
     ])
     
     
