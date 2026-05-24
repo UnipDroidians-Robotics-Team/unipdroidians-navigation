@@ -17,10 +17,10 @@
 // --- PARÂMETROS FÍSICOS (CALIBRADOS) ---
 // 12.95 pulsos mecânicos por revolução; quadratura 4x → 51.8 pulsos efetivos.
 // METROS_POR_PULSO usado no controlador interno de velocidade (Arduino).
-const float METROS_POR_PULSO = 156 * 3.14159 / (12.95 * 4.0);
+const float METROS_POR_PULSO = 0.165 * 3.14159 / (12.95 * 4.0);
 
 // --- POTÊNCIA ---
-const int MAX_PWM = 30;
+const int MAX_PWM = 28;
 const int MIN_PWM = 13;
 
 // --- TRIM — ajuste para andar em linha reta ---

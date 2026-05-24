@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<robot name="udh1" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- ================= BASE FOOTPRINT ================= -->
+  <link name="base_footprint"/>
+
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0.0825" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ================= BASE LINK ================= -->
+  <link name="base_link">
+    <!-- Visual da Caixa Principal -->
+    <visual>
+      <origin xyz="0 0 0.1375" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.62 0.41 0.275"/>
+      </geometry>
+      <material name="acrilico_preto">
+        <color rgba="0.1 0.1 0.1 0.95"/>
+      </material>
+    </visual>
+    <!-- Colisão da Caixa Principal (Necessário para o Gazebo) -->
+    <collision>
+      <origin xyz="0 0 0.1375" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.62 0.41 0.275"/>
+      </geometry>
+    </collision>
+    
+    <!-- Visual da Placa de MDF -->
+    <visual>
+      <origin xyz="-0.02 0 0.278" rpy="0 0 0"/> 
+      <geometry>
+        <box size="0.52 0.38 0.006"/>
+      </geometry>
+      <material name="mdf_madeira">
+        <color rgba="0.76 0.60 0.42 1.0"/>
+      </material>
+    </visual>
+    <!-- Colisão da Placa de MDF -->
+    <collision>
+      <origin xyz="-0.02 0 0.278" rpy="0 0 0"/> 
+      <geometry>
+        <box size="0.52 0.38 0.006"/>
+      </geometry>
+    </collision>
+
+    <!-- Física da Base (Fictícia para simulação) -->
+    <inertial>
+      <origin xyz="0 0 0.1375" rpy="0 0 0"/>
+      <mass value="15.0"/>
+      <inertia ixx="0.30" ixy="0.0" ixz="0.0" iyy="0.50" iyz="0.0" izz="0.60"/>
+    </inertial>
+  </link>
+
+  <!-- ================= RODA ESQUERDA ================= -->
+  <joint name="left_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="left_wheel"/>
+    <origin xyz="0.145 0.125 0.0" rpy="-1.5708 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <link name="left_wheel">
+    <visual>
+      <geometry>
+        <cylinder radius="0.0825" length="0.045"/>
+      </geometry>
+      <material name="pneu_borracha">
+        <color rgba="0.2 0.2 0.2 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.0825" length="0.045"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <!-- ================= RODA DIREITA ================= -->
+  <joint name="right_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="right_wheel"/>
+    <origin xyz="0.145 -0.125 0.0" rpy="-1.5708 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <link name="right_wheel">
+    <visual>
+      <geometry>
+        <cylinder radius="0.0825" length="0.045"/>
+      </geometry>
+      <material name="pneu_borracha">
+        <color rgba="0.2 0.2 0.2 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.0825" length="0.045"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <!-- ================= CASTER WHEEL (RODA BOBO) ================= -->
+  <joint name="caster_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="caster_wheel"/>
+    <origin xyz="-0.25 0 -0.0444" rpy="0 0 0"/>
+  </joint>
+
+  <link name="caster_wheel">
+    <visual>
+      <geometry>
+        <sphere radius="0.0381"/>
+      </geometry>
+      <material name="pneu_borracha">
+        <color rgba="0.2 0.2 0.2 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.0381"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.3"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <!-- Para a roda boba deslizar no Gazebo sem travar no chão -->
+  <gazebo reference="caster_wheel">
+    <mu1 value="0.001"/>
+    <mu2 value="0.001"/>
+  </gazebo>
+
+  <!-- ================= LIDAR (LASER) ================= -->
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="laser_frame"/>
+    <origin xyz="0.30 0 0.315" rpy="0 0 0"/>
+  </joint>
+
+  <link name="laser_frame">
+    <visual>
+      <origin xyz="0 0 -0.01" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.05 0.05 0.02"/>
+      </geometry>
+      <material name="lidar_base">
+        <color rgba="0.2 0.2 0.2 1.0"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0.015" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.025" length="0.02"/>
+      </geometry>
+      <material name="lidar_top">
+        <color rgba="0.05 0.05 0.05 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.025" length="0.04"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <!-- ================= CAMERA ================= -->
+  <joint name="camera_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="camera_link"/>
+    <origin xyz="0.26 0 0.48" rpy="0 0 0"/>
+  </joint>
+
+  <link name="camera_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.025 0.124 0.029"/>
+      </geometry>
+      <material name="realsense_prata">
+        <color rgba="0.8 0.8 0.8 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.025 0.124 0.029"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <!-- ================= NOTEBOOK ================= -->
+  <link name="notebook_base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.25 0.35 0.02"/>
+      </geometry>
+      <material name="notebook_gray">
+        <color rgba="0.5 0.5 0.5 1.0"/>
+      </material>
+    </visual>
+    <inertial>
+      <mass value="1.5"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <joint name="notebook_base_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="notebook_base_link"/>
+    <origin xyz="-0.05 0.0 0.29" rpy="0 0 3.14159"/> 
+  </joint>
+
+  <link name="notebook_screen_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.02 0.35 0.25"/>
+      </geometry>
+      <material name="screen_black">
+        <color rgba="0.1 0.1 0.1 1.0"/>
+      </material>
+    </visual>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="0.005" ixy="0.0" ixz="0.0" iyy="0.005" iyz="0.0" izz="0.005"/>
+    </inertial>
+  </link>
+
+  <joint name="notebook_screen_joint" type="fixed">
+    <parent link="notebook_base_link"/>
+    <child link="notebook_screen_link"/>
+    <origin xyz="-0.115 0.0 0.135" rpy="0 -0.1 0"/> 
+  </joint>
+
+
+  <!-- =================================================== -->
+  <!--             PLUGINS PARA O GAZEBO                   -->
+  <!-- =================================================== -->
+
+  <!-- 1. PLUGIN DE TRAÇÃO DIFERENCIAL (Movimentação) -->
+  <gazebo>
+    <plugin name="gazebo_ros_diff_drive" filename="libgazebo_ros_diff_drive.so">
+      <!-- Links das rodas que criamos acima -->
+      <left_joint>left_wheel_joint</left_joint>
+      <right_joint>right_wheel_joint</right_joint>
+      
+      <!-- Cinemática do seu robô baseada no URDF -->
+      <wheel_separation>0.25</wheel_separation> <!-- Distância Y entre rodas (0.125 * 2) -->
+      <wheel_diameter>0.165</wheel_diameter>   <!-- Diâmetro da roda (Radius 0.0825 * 2) -->
+
+      <!-- Limites -->
+      <max_wheel_torque>20</max_wheel_torque>
+      <max_wheel_acceleration>1.0</max_wheel_acceleration>
+
+      <!-- Tópicos do ROS 2 -->
+      <command_topic>cmd_vel</command_topic>
+      <odometry_topic>odom</odometry_topic>
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_footprint</robot_base_frame>
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <publish_wheel_tf>true</publish_wheel_tf>
+    </plugin>
+  </gazebo>
+
+  <!-- 2. PLUGIN DO SCANNER LASER (LiDAR) -->
+  <gazebo reference="laser_frame">
+    <sensor type="ray" name="udh1_laser">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize> <!-- Mostra os raios vermelhos no Gazebo -->
+      <update_rate>10</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>270</samples>
+            <resolution>1</resolution>
+            <min_angle>-2.35619</min_angle> <!-- -135 graus -->
+            <max_angle>2.35619</max_angle>  <!-- +135 graus -->
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.15</min>
+          <max>12.0</max>
+          <resolution>0.01</resolution>
+        </range>
+      </ray>
+      <plugin name="gazebo_ros_laser" filename="libgazebo_ros_ray_sensor.so">
+        <ros>
+          <remapping>~/out:=scan</remapping> <!-- Publica no tópico /scan -->
+        </ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
+        <frame_name>laser_frame</frame_name>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+</robot>
