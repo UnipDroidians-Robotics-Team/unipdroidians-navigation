@@ -1,4 +1,0 @@
-Invoking command in '/home/joao/Navigation/build/udh1_description': CMAKE_PREFIX_PATH=/opt/ros/humble ROS_DOMAIN_ID=226 /usr/bin/cmake --build /home/joao/Navigation/build/udh1_description -- -j16 -l16
-Invoked command in '/home/joao/Navigation/build/udh1_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble ROS_DOMAIN_ID=226 /usr/bin/cmake --build /home/joao/Navigation/build/udh1_description -- -j16 -l16
-Invoking command in '/home/joao/Navigation/build/udh1_description': CMAKE_PREFIX_PATH=/opt/ros/humble ROS_DOMAIN_ID=226 /usr/bin/cmake --install /home/joao/Navigation/build/udh1_description
-Invoked command in '/home/joao/Navigation/build/udh1_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble ROS_DOMAIN_ID=226 /usr/bin/cmake --install /home/joao/Navigation/build/udh1_description

@@ -15,7 +15,8 @@ def generate_launch_description():
     map_file_arg = DeclareLaunchArgument(
         'map',
         default_value=os.path.join(
-            os.path.expanduser('~'), 'athome_ws', 'mapas', 'mapa_udh1.yaml'
+            'mapas',
+            'udh1_mapa.yaml'
         ),
         description='Caminho para o .yaml do mapa'
     )
@@ -29,9 +30,9 @@ def generate_launch_description():
     map_file    = LaunchConfiguration('map')
     params_file = LaunchConfiguration('params_file')
 
-    import xacro
-    urdf_file = os.path.join(udh1_description_dir, 'urdf', 'udh1.urdf.xacro')
-    robot_description = xacro.process_file(urdf_file).toxml()
+    urdf_file = os.path.join(udh1_description_dir, 'urdf', 'udh1.urdf')
+    with open(urdf_file, 'r') as f:
+        robot_description = f.read()
 
     robot_state_publisher = Node(
         package='robot_state_publisher',
@@ -46,10 +47,17 @@ def generate_launch_description():
 
     base_driver_node = Node(
         package='serial_com_py',
-        executable='base_driver_pulse',
-        name='udh1_base_driver',
+        executable='base_driver',
+        name='base_driver',
         output='screen'
     )
+
+    safe_stop_node = Node(
+    package='serial_com_py',
+    executable='safe_stop',
+    name='safe_stop',
+    output='screen'
+)
 
     lidar_node = Node(
         package='sllidar_ros2',
@@ -79,7 +87,6 @@ def generate_launch_description():
         name='map_server',
         output='screen',
         parameters=[{
-            'use_sim_time':  False,
             'yaml_filename': map_file
         }]
     )
@@ -100,7 +107,7 @@ def generate_launch_description():
             )
         ),
         launch_arguments={
-            'use_sim_time': 'false',        # nav2_bringup aceita string aqui
+            'map':          map_file,
             'params_file':  params_file,
             'autostart':    'true',
         }.items()
@@ -112,7 +119,6 @@ def generate_launch_description():
         name='lifecycle_manager_localization',
         output='screen',
         parameters=[{
-            'use_sim_time': False,
             'autostart':    True,
             'node_names':   ['map_server', 'amcl']
         }]
@@ -124,35 +130,20 @@ def generate_launch_description():
         name='rviz2',
         output='screen',
         arguments=['-d', os.path.join(my_bringup_dir, 'rviz', 'nav2_udh1.rviz')],
-        parameters=[{'use_sim_time': False}]
+        parameters=[]
     )
-    
-    #watchdog_node = Node(
-     #   package='serial_com_py',
-     #   executable='distance_watchdog',
-     #   name='distance_watchdog',
-      #  output='screen',
-       # parameters=[
-        #    os.path.join(
-         #       get_package_share_directory('serial_com_py'),
-          #      'config', 'watchdog_params.yaml'
-           # )
-        #]
-    #)
 
     return LaunchDescription([
         map_file_arg,
         params_file_arg,
         robot_state_publisher,
         base_driver_node,
+        safe_stop_node,
         lidar_node,
         filter_launch,
         map_server_node,
         amcl_node,
         lifecycle_manager,
-        nav2_bringup,
+        nav2_bringup, #o nav2 ja puxa esses trem sozinho, espero
         rviz_node,
-        #watchdog_node,
     ])
-    
-    

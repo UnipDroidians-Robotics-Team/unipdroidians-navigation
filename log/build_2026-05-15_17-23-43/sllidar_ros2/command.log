@@ -1,6 +1,0 @@
-Invoking command in '/home/joao/Navigation/build/sllidar_ros2': CMAKE_PREFIX_PATH=/opt/ros/humble ROS_DOMAIN_ID=98 /usr/bin/cmake /home/joao/Navigation/src/sllidar_ros2 -DCMAKE_INSTALL_PREFIX=/home/joao/Navigation/install/sllidar_ros2
-Invoked command in '/home/joao/Navigation/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble ROS_DOMAIN_ID=98 /usr/bin/cmake /home/joao/Navigation/src/sllidar_ros2 -DCMAKE_INSTALL_PREFIX=/home/joao/Navigation/install/sllidar_ros2
-Invoking command in '/home/joao/Navigation/build/sllidar_ros2': CMAKE_PREFIX_PATH=/opt/ros/humble ROS_DOMAIN_ID=98 /usr/bin/cmake --build /home/joao/Navigation/build/sllidar_ros2 -- -j16 -l16
-Invoked command in '/home/joao/Navigation/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble ROS_DOMAIN_ID=98 /usr/bin/cmake --build /home/joao/Navigation/build/sllidar_ros2 -- -j16 -l16
-Invoking command in '/home/joao/Navigation/build/sllidar_ros2': CMAKE_PREFIX_PATH=/opt/ros/humble ROS_DOMAIN_ID=98 /usr/bin/cmake --install /home/joao/Navigation/build/sllidar_ros2
-Invoked command in '/home/joao/Navigation/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble ROS_DOMAIN_ID=98 /usr/bin/cmake --install /home/joao/Navigation/build/sllidar_ros2
