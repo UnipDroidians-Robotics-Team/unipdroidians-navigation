@@ -14,12 +14,9 @@ def generate_launch_description():
 
     map_file_arg = DeclareLaunchArgument(
         'map',
-        default_value=os.path.join(
-            'mapas',
-            'udh1_mapa.yaml'
-        ),
+        default_value='/home/joao/Navigation/mapas/mapa_udh1.yaml',
         description='Caminho para o .yaml do mapa'
-    )
+        )
 
     params_file_arg = DeclareLaunchArgument(
         'params_file',
